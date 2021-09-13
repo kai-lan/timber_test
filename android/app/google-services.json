@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "769566866445",
+    "project_id": "timber-test1",
+    "storage_bucket": "timber-test1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:769566866445:android:5125fbc186279af83ee944",
+        "android_client_info": {
+          "package_name": "com.example.timber_test1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "769566866445-i3esohe591s6q54im0j9scqachq92jtf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuPZeVtkpL5RoM2j-iNUsFUW1JBelXMgY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "769566866445-i3esohe591s6q54im0j9scqachq92jtf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "769566866445-h1tcbpl994fvcg7v2c8dvnfc1tgfpjma.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.timberTest1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
