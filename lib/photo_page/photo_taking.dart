@@ -7,9 +7,10 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:timber_test1/photo_page/photo_list.dart';
 import 'package:timber_test1/repository/test_number.dart';
-import 'package:timber_test1/walking_test_page/bluetooth_connection.dart';
-
 import '../app_bar.dart';
+
+/// On this screen user is able to use their camera to take photo
+/// and choose whether to upload it.
 
 final FirebaseStorage _storage = FirebaseStorage.instance;
 final FirebaseAuth _auth = FirebaseAuth.instance;

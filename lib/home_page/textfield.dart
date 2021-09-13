@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:timber_test1/models/test.dart';
 
+/// The textfield record user's response and upload to the database.
+
 class MyTextField extends StatefulWidget {
   MyTest test;
   String type;

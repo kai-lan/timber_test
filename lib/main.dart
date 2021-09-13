@@ -9,6 +9,11 @@ import 'package:timber_test1/register_page.dart';
 import 'package:timber_test1/sign_in_page.dart';
 import 'package:timber_test1/verify_page.dart';
 
+/// This the main function, the entry point, for the entire program.
+/// After launching the program, it initializes the firebase,
+/// create named routes for later use, and define meta-data for font.
+/// The default route is the sign-in page.
+
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());

@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -9,6 +8,11 @@ import 'package:timber_test1/repository/test_number.dart';
 import '../event_channel.dart';
 import '../method_channel.dart';
 import '../repository/dataRepository.dart';
+
+/// It captures acceration data from both phone and metawear board.
+/// The diagrams show the live data when accelerometer listeners are on.
+/// There are 'start' and 'stop' buttons to control accelerometer, and
+/// then after a little wait, user can upload the data to database.
 
 final FirebaseAuth _auth = FirebaseAuth.instance;
 
@@ -25,7 +29,6 @@ class _AccelerometerState extends State<Accelerometer> {
   List<double> _metawearData = List.filled(3, 0.0);
   List<double> traceX = [];
   List<double> traceY = [];
-  List<double> traceZ = [];
   Timer? timer;
   bool executing = false;
   bool downloadFinished = false;
@@ -98,12 +101,13 @@ class _AccelerometerState extends State<Accelerometer> {
           style: Theme.of(context).textTheme.headline1,
           textAlign: TextAlign.center,
         ),
-        //Padding(padding: EdgeInsets.only(top: 5.0)),
+        // Display acceleration data from phone
         Text('Phone data in z axis'),
         Container(
           height: 80,
           child: scopeX,
         ),
+        // Display acceleration data from metawear board
         Text('Metawear data in z axis'),
         Container(
           height: 80,
@@ -151,6 +155,7 @@ class _AccelerometerState extends State<Accelerometer> {
             child: Text("Upload data"),
             color: Colors.blue,
             onPressed: () {
+              // Indicating data is being downloaded from log
               showLoadingIndicator();
               requestingData = true;
             }),
@@ -175,6 +180,7 @@ class _AccelerometerState extends State<Accelerometer> {
   @override
   void initState() {
     super.initState();
+    // Listen to the native side whether log data finished download
     downloadFinishedStream = EventHandling.dataReady
         .receiveBroadcastStream()
         .listen((dynamic finished) async {
@@ -211,13 +217,14 @@ class _AccelerometerState extends State<Accelerometer> {
         DataRepository.writeToFile(filePath, data);
       });
     });
+    // Subscribe to phone data
     _streamSubscriptions
         .add(accelerometerEvents.listen((AccelerometerEvent event) {
       setState(() {
         _accelData = <double>[event.x, event.y, event.z];
       });
     }));
-
+    // Subscribe to metawear data
     _streamSubscriptions.add(EventHandling.dataStream
         .receiveBroadcastStream()
         .listen((dynamic values) {

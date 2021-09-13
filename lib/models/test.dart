@@ -1,3 +1,6 @@
+/// This is model class for a test, including basic info such as
+/// location, floor type, etc.
+
 class MyTest {
   String email;
   int testNum;

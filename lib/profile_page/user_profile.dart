@@ -8,6 +8,8 @@ import 'package:timber_test1/models/user.dart';
 import 'package:timber_test1/photo_page/photo_list.dart';
 import 'package:timber_test1/repository/test_number.dart';
 
+/// On this page users can edit their bio: name, job, etc.
+
 final FirebaseAuth _auth = FirebaseAuth.instance;
 final FirebaseFirestore _db = FirebaseFirestore.instance;
 

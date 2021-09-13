@@ -1,6 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
+/// Customized appbar that includes a sign-out button that
+/// can sign out the current user.
+
 final FirebaseAuth _auth = FirebaseAuth.instance;
 
 class MyAppBar extends AppBar {

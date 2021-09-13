@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_signin_button/button_builder.dart';
 
+/// This allows user to create an account. The system will check
+/// if this email is already registered with an account, and it
+/// will register if not.
+
 final FirebaseAuth _auth = FirebaseAuth.instance;
 
-/// Entrypoint example for registering via Email/Password.
 class MyRegisterPage extends StatefulWidget {
   /// The page title.
   final String title = 'Registration';

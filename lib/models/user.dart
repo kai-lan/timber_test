@@ -1,3 +1,5 @@
+/// This is model class for users, with name, company, email,etc.
+
 class Users {
   String name;
   String company;

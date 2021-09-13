@@ -9,7 +9,8 @@ import 'package:timber_test1/walking_test_page/bluetooth_connection.dart';
 import 'package:timber_test1/method_channel.dart';
 import '../models/user.dart';
 
-// hold, retrieve and save your data
+/// Multiple methods defined for writing, clearing and uploading files.
+
 class DataRepository {
   static Users? user;
   static DocumentReference? reference;

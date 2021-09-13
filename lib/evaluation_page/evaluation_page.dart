@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:timber_test1/app_bar.dart';
 import 'package:timber_test1/repository/test_number.dart';
 
+/// This page is for user to fill in subjective feelings about
+/// timber wood floor. Users then can submit the report for
+/// this test. From here they can continue to next test or sign out.
 
 final FirebaseAuth _auth = FirebaseAuth.instance;
 final FirebaseFirestore _db = FirebaseFirestore.instance;
@@ -98,13 +101,11 @@ class MyTextFieldState extends State<MyTextField> {
                     ],
                   ),);
           },
+          color: Colors.blue,
           child: Text(
             "Submit",
           ),
         ),
-        MaterialButton(onPressed: () {
-          Navigator.pushReplacementNamed(context, '/main_page');
-        })
       ],
     );
   }

@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:location/location.dart' as loc;
 import 'package:timber_test1/models/test.dart';
-import 'package:timber_test1/repository/dataRepository.dart';
+
+/// It uses the GPS system from user's smartphone to locate
+/// and display it on the screen.
 
 class GetLocBundle extends StatefulWidget {
   MyTest? test;

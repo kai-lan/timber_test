@@ -6,6 +6,9 @@ import 'package:timber_test1/app_bar.dart';
 import 'package:timber_test1/method_channel.dart';
 import 'package:timber_test1/walking_test_page/walking_test_page.dart';
 
+/// Let usr choose a metawear board to connect to via bluetooth. This
+/// uses the native page from Android to select a device.
+
 class Metawear extends StatefulWidget {
    @override
   State<StatefulWidget> createState() => _MetawearState();
@@ -61,7 +64,7 @@ class _MetawearState extends State<Metawear> {
       ),
     );
   }
-
+// Go to Android native view to connect the board
 // if connected return true otherwise return false
   Future<bool> _getAndroidNativeView() async {
     try {

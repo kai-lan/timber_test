@@ -4,11 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:timber_test1/app_bar.dart';
 import 'package:timber_test1/home_page/dropdown_menu.dart';
 import 'package:timber_test1/models/test.dart';
-import 'package:timber_test1/models/user.dart';
-import 'package:timber_test1/photo_page/photo_gallery.dart';
 import 'package:timber_test1/repository/test_number.dart';
 import 'location.dart';
 import 'textfield.dart';
+
+/// In main page, users fill out information specific for a
+/// certain test, such as location, floor type, etc.
 
 final FirebaseAuth _auth = FirebaseAuth.instance;
 final FirebaseFirestore _db = FirebaseFirestore.instance;

@@ -2,6 +2,12 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 
+/// Sign in page is where return users can sign in, otherwise
+/// new user can register an account with an email and password.
+/// No requirement on password is currently implemented.
+/// If a user successfully sign in, he will be directed to the
+/// user profile page to fill in quick bio.
+///
 final FirebaseAuth _auth = FirebaseAuth.instance;
 
 class MySignInPage extends StatelessWidget {

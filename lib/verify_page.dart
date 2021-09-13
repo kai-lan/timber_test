@@ -3,6 +3,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:timber_test1/app_bar.dart';
 
+///  First time user after they create their account need to
+///  verify their email address, this will send a link to the
+///  email they provide. By clicking on the link a user can
+///  verify their email, and it will direct user to the user
+///  profile page wiht quick bio.
+
 final FirebaseAuth _auth = FirebaseAuth.instance;
 
 class VerifyPage extends StatelessWidget {

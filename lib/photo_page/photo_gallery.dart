@@ -6,6 +6,9 @@ import 'package:timber_test1/photo_page/photo_taking.dart';
 import 'package:timber_test1/repository/test_number.dart';
 import 'package:timber_test1/walking_test_page/bluetooth_connection.dart';
 
+/// This page displays all the photos that have been uploaded to the
+/// database in one test. There is no upper limit on number of photos.
+
 class PhotoGallery extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => _PhotoGalleryState();
